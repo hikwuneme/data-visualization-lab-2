@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset = 'utf-8'>
+        <meta name = "decription" content= "Drawing shapes with D3">
+        <title> Drawing SVG Shapes with D3 </title>
+        <script src = "https://d3js.org/d3.v6.min.js"></script>
+    </head>
+
+    <body>
+        <svg width= "500" height= "300" style="border:1px solid blue">
+            <text x= "100" y="40"> Worksheet 1 - Getting Started </text>
+            <circle cx="250" cy="150" r="40" style="fill: green"/>
+            <rect width ="50" height = "200" x="0" y="100" style="fill: yellow;"></rect>
+            <line x1= "25" y1= "150" x2= "250" y2= "150" style= "stroke: blue; stroke-width: 1"/>
+        </svg>
+
+
+       <h3>D3</h3>
+        <script>
+            d3.select("body")
+            .append("svg")
+            .classed("happiness",true)
+            .attr("width", 500)
+            .attr("height", 300)
+            .attr("style","border:1px solid blue");
+
+            d3.select(".happiness") 
+            .append("text")
+            .attr("x","100")
+            .attr("y","40")
+            .text("Worksheet 1 - Getting Started");
+
+            d3.select(".happiness")
+            .append("circle")
+            .attr("cx",250)
+            .attr("cy",150)
+            .attr("r",40)
+            .attr("fill","green");
+
+            d3.select(".happiness")
+            .append("rect")
+            .attr("width",50)
+            .attr("height",200)
+            .attr("x",0)
+            .attr("y",100)
+            .attr("fill","yellow");
+
+  
+            d3.select(".happiness")
+            .append("line")
+            .attr("x1", 25)
+            .attr("y1", 150)
+            .attr("x2",250)
+            .attr("y2",150)
+            .attr("stroke","blue")
+            .attr("stroke-width",1);
+        </script>
+    </body>
+</html>
